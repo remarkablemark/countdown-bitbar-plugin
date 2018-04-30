@@ -7,13 +7,7 @@
 // <bitbar.desc>Counts down the time remaining.</bitbar.desc>
 // <bitbar.dependencies>node</bitbar.dependencies>
 
-/**
- * Ensures the number has 2 digits.
- *
- * @param  {Number} number
- * @return {Number|String}
- */
-const pad = number => (number > 9 ? number : '0' + number);
+const { pad } = require('./lib/helpers');
 
 // current time
 const now = Date.now();
