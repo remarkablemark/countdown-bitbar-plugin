@@ -7,6 +7,7 @@
 // <bitbar.desc>Counts down the time remaining.</bitbar.desc>
 // <bitbar.dependencies>node</bitbar.dependencies>
 
+const bitbar = require('./lib/bitbar');
 const { pad } = require('./lib/helpers');
 
 // current time
@@ -41,4 +42,4 @@ const m = Math.floor(delta / (1000 * 60)) % 60;
 const h = Math.floor(delta / (1000 * 60 * 60)) % 24;
 
 // display remaining time
-console.log(`${h}:${pad(m)}:${pad(s)}`);
+bitbar.output(`${h}:${pad(m)}:${pad(s)}`);
